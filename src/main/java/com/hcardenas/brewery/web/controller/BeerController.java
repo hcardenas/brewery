@@ -4,6 +4,8 @@ package com.hcardenas.brewery.web.controller;
 import com.hcardenas.brewery.services.BeerService;
 import com.hcardenas.brewery.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
