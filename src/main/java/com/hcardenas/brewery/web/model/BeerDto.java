@@ -1,5 +1,6 @@
 package com.hcardenas.brewery.web.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -23,8 +24,10 @@ public class BeerDto {
     @Null
     private Integer version;
     @Null
+    @JsonFormat(pattern = "yyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING)
     private OffsetDateTime createdDate;
     @Null
+    @JsonFormat(pattern = "yyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING)
     private OffsetDateTime lastModifiedDate;
 
     @NotBlank
@@ -39,6 +42,7 @@ public class BeerDto {
 
     @NotNull
     @Positive
+    @JsonFormat(shape= JsonFormat.Shape.STRING)
     private BigDecimal price;
 
     private Integer quantityOnHand;
